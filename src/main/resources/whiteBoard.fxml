@@ -2,25 +2,57 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #c7c7c7;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
-    <Pane fx:id="board" layoutX="14.0" layoutY="76.0" prefHeight="629.9999000000025" prefWidth="1252.0" />
-    <HBox id="" alignment="CENTER_LEFT" layoutX="15.0" layoutY="7.0" prefHeight="62.0" prefWidth="1252.0" spacing="3.0" style="-fx-background-color: #f0f0f0;">
+    <Pane fx:id="board" layoutX="0.0" layoutY="0.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black;" />
+    <HBox id="" alignment="CENTER" fillHeight="true" layoutX="280.0" layoutY="6.0" mouseTransparent="false" pickOnBounds="true" prefHeight="62.0" prefWidth="674.0" spacing="6.0" style="-fx-background-color: #f0f0f0;&#10;-fx-hgap: 20px;&#10;-fx-background-radius: 50px;&#10;-fx-border-radius: 50px;&#10;-fx-border-width: 3px;&#10;-fx-border-color: black;&#10;-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);">
       <children>
-        <Button id="draw" fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="53.9609375" prefWidth="127.0" style="" text="Delete" />
-        <Button id="draw" fx:id="createRect" mnemonicParsing="false" onAction="#createRect" prefHeight="53.9609375" prefWidth="127.0" style="-fx-padding-left: 10px;" text="Draw Rectangle" />
-        <Button id="draw" fx:id="createCircle" mnemonicParsing="false" onAction="#createCircle" prefHeight="53.9609375" prefWidth="127.0" style="-fx-padding-left: 10;" text="Draw Circle" />
+        <Button id="draw" fx:id="undo" mnemonicParsing="false" onAction="#undo" prefHeight="40.0" prefWidth="69.0" rotate="0.0" style="" text="Undo" textAlignment="LEFT" textOverrun="ELLIPSIS" underline="false" />
+        <Button id="draw" fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="69.0" rotate="0.0" style="" text="Delete" textAlignment="LEFT" textOverrun="ELLIPSIS" underline="false" />
+        <Button id="draw" fx:id="pen" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#pen" prefHeight="40.0" prefWidth="40.0" rotate="0.0" style="" text="" textAlignment="LEFT" textOverrun="ELLIPSIS" underline="false">
+          <graphic>
+            <CubicCurve controlX1="-50.0" controlX2="-54.594818115234375" controlY1="-100.0" controlY2="76.01701354980469" disable="false" endX="-12.585853576660156" endY="-27.595272064208984" fill="#3354ff00" mouseTransparent="false" scaleX="0.3" scaleY="0.3" scaleZ="0.3" smooth="true" startX="-102.4140625" startY="3.6936607360839844" stroke="BLACK" strokeMiterLimit="10.0" strokeWidth="8.1" visible="true" />
+          </graphic>
+        </Button>
+        <Button id="draw" fx:id="createRect" cancelButton="false" graphicTextGap="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createRect" prefHeight="40.0" prefWidth="40.0" style="-fx-padding-left: 10px;" text="">
+          <graphic>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="19.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
+          </graphic>
+        </Button>
+        <Button id="draw" fx:id="createCircle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCircle" prefHeight="40.0" prefWidth="40.0" style="-fx-padding-left: 10;" text="">
+          <graphic>
+            <Circle fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+          </graphic>
+        </Button>
         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="4.0">
           <children>
             <ColorPicker id="colorpicker" fx:id="colorPicker" disable="false" editable="false" />
             <Button fx:id="setColor" mnemonicParsing="false" onAction="#setColor" text="Set Color" />
           </children>
         </VBox>
+        <Button id="draw" fx:id="resize" mnemonicParsing="false" onAction="#resize" prefHeight="40.0" prefWidth="80.0" rotate="0.0" style="" text="Resize" textAlignment="LEFT" textOverrun="ELLIPSIS" underline="false" />
+        <VBox fx:id="widthBox" alignment="CENTER" prefHeight="62.0" prefWidth="69.0" visible="false">
+          <children>
+            <TextField fx:id="width" prefWidth="40.0" />
+            <Label fx:id="widthLabel" text="Width" />
+          </children>
+        </VBox>
+        <VBox fx:id="heightBox" alignment="CENTER" prefHeight="62.0" prefWidth="69.0" visible="false">
+          <children>
+            <TextField fx:id="height" prefWidth="40.0" />
+            <Label text="Height" />
+          </children>
+        </VBox>
       </children>
+      <padding>
+        <Insets left="10.0" />
+      </padding>
     </HBox>
   </children>
 </AnchorPane>

@@ -36,10 +36,13 @@ public class Circle extends Shape implements Cloneable{
         return "circle";
     }
 
-    public ArrayList<Float> getSize(){
-        ArrayList<Float> arr = new ArrayList<>();
-        arr.add((float)getRadius());
+    public ArrayList<Integer> getSize(){
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(getRadius());
         return arr;
+    }
+    public void setSize(ArrayList<Integer> size){
+        this.radius = size.get(0);
     }
     public String toString() {
         return "Circle, Color: "+ getColor() +

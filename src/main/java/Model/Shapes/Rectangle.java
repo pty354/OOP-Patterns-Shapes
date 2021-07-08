@@ -38,13 +38,16 @@ public class Rectangle extends Shape implements Cloneable{
         return "rectangle";
     }
 
-    public ArrayList<Float> getSize(){
-        ArrayList<Float> arr = new ArrayList<>();
-        arr.add((float) getHeight());
-        arr.add((float) getWidth());
+    public ArrayList<Integer> getSize(){
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(getHeight());
+        arr.add(getWidth());
         return arr;
     }
-
+    public void setSize(ArrayList<Integer> size){
+        setHeight(size.get(0));
+        setWidth(size.get(1));
+    }
     public String toString() {
         return "Rectangle, Color: "+ getColor() +
                 ", Origin: (" + (int)getOrigin().getX() +

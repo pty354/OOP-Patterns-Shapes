@@ -39,6 +39,12 @@ public abstract class ProcessCommands {
                 case "MOVE":
                     processMove();
                     break;
+                case "RESIZECIRCLE":
+                    processResizeCircle();
+                    break;
+                case "RESIZERECT":
+                    processResizeRect();
+                    break;
                 case "DRAW":
                     processDraw();
                     break;
@@ -94,6 +100,13 @@ public abstract class ProcessCommands {
         invoker.storeAndExecute(new MoveCommand(getLocation()));
     }
 
+    public void processResizeCircle(){
+        invoker.storeAndExecute(new ResizeCircleCommand(Integer.parseInt(instruction[1])));
+    }
+
+    public void processResizeRect(){
+        invoker.storeAndExecute(new ResizeRectCommand(Integer.parseInt(instruction[1]), Integer.parseInt(instruction[2])));
+    }
     public void processDraw(){
         invoker.onlyExecute(new DrawCommand(getSelection()));
     }

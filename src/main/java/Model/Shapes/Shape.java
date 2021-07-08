@@ -11,7 +11,8 @@ public abstract class Shape{
     public abstract ShapeMomento saveMomento() throws CloneNotSupportedException;
     public abstract Object clone();
     public abstract String getType();
-    public abstract ArrayList<Float> getSize();
+    public abstract ArrayList<Integer> getSize();
+    public abstract void setSize(ArrayList<Integer> size);
     //Accessors
     public String getColor() { return color; }
     public void setColor(String color) { this.color = color; }
