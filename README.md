@@ -1,4 +1,4 @@
-# OOP-Patterns-Shapes
+# Object-Oriented Programming Simple Whiteboard
 *This projects demonstrates the ability to use command, momento and strategy patterns by manipulating basic shapes.*
 
 UML Diagram:\
