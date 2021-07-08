@@ -16,5 +16,7 @@ C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\DrawBoard.java
 C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\DrawsceneCommand.java
 C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\InputProcessing\ReadFromFile.java
 C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\CreateCircCommand.java
+C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\ResizeCircleCommand.java
+C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\ResizeRectCommand.java
 C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\InputProcessing\ReadFromUserInput.java
 C:\Users\Brian\Desktop\Whiteboard\src\main\java\Model\Commands\DeleteCommand.java

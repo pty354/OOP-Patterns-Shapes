@@ -1,2 +1,4 @@
+Model\Commands\ResizeRectCommand.class
 Model\InputProcessing\ReadFromUserInput.class
+Model\Commands\ResizeCircleCommand.class
 Controller\WhiteboardController.class
